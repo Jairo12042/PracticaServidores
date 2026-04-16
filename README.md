@@ -1,3 +1,4 @@
+
 # StockFlow - Sistema de Inventario
 
 StockFlow es una aplicación web sencilla para la gestión de inventario
