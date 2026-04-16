@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockFlow | Sistema de Inventario</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">Stock<span>Flow</span></h1>
+            <p>Gestión de inventario inteligente</p>
+        </header>
+
+        <div id="step-1" class="card">
+            <h3>¿Cuántos productos nuevos vas a registrar?</h3>
+            <div class="input-group">
+                <input type="number" id="numProducts" placeholder="Ej: 3" min="1">
+                <button onclick="generateTable()">Comenzar</button>
+            </div>
+        </div>
+
+        <div id="step-2" class="card hidden">
+            <h3>Detalles del Ingreso</h3>
+            <div id="dynamicTableContainer">
+                </div>
+            <button class="btn-save" onclick="saveAll()">Guardar Inventario</button>
+        </div>
+
+        <div id="step-3" class="card hidden">
+            <h3>Inventario Registrado</h3>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Medida</th>
+                            <th>Cantidad</th>
+                        </tr>
+                    </thead>
+                    <tbody id="finalData">
+                        </tbody>
+                </table>
+            </div>
+            <button class="btn-new" onclick="restart()">Hacer otro registro</button>
+        </div>
+    </div>
+    <script src="codigo.js"></script>
+</body>
+</html>
